@@ -1,0 +1,13 @@
+# Dependencias / artefactos
+node_modules/
+package-lock.json
+package.json
+
+# Respaldo pesado (no necesario en el repo/Pages)
+index.full.backup.html
+
+# Basura del sistema operativo
+.DS_Store
+Thumbs.db
+desktop.ini
+*.log
