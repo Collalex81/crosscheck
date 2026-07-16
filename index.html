@@ -94,6 +94,9 @@
   /* help button + modal */
   .btn-help{display:inline-flex;align-items:center;gap:6px;font-family:var(--sans);font-size:.78rem;font-weight:700;letter-spacing:.02em;color:var(--brand);background:var(--panel);border:1px solid var(--line);border-radius:999px;padding:7px 15px;cursor:pointer;box-shadow:var(--sh-1);white-space:nowrap;transition:.15s var(--ease)}
   .btn-help:hover{border-color:transparent;color:#fff;background:linear-gradient(180deg,var(--brand-2),var(--brand));box-shadow:var(--sh-brand)}
+  .btn-home{display:inline-flex;align-items:center;gap:6px;font-family:var(--sans);font-size:.78rem;font-weight:700;letter-spacing:.02em;color:var(--ink2);background:var(--panel);border:1px solid var(--line);border-radius:999px;padding:7px 14px;cursor:pointer;box-shadow:var(--sh-1);white-space:nowrap;transition:.15s var(--ease);text-decoration:none}
+  .btn-home svg{width:14px;height:14px;flex:none}
+  .btn-home:hover{border-color:transparent;color:#fff;background:linear-gradient(180deg,#26313f,#0e141b);box-shadow:var(--sh-2)}
   .help-overlay{position:fixed;inset:0;background:rgba(6,10,20,.55);backdrop-filter:blur(2px);z-index:200;display:none;align-items:flex-start;justify-content:center;padding:40px 16px;overflow:auto}
   .help-overlay.open{display:flex}
   .help-modal{background:#fff;max-width:840px;width:100%;border-radius:20px;box-shadow:0 30px 70px rgba(6,10,20,.45);overflow:hidden;animation:helpIn .22s var(--ease) both}
@@ -314,6 +317,7 @@
       </div>
     </div>
     <div class="mh-right">
+      <a class="btn-home" href="https://collalex81.github.io/JCE-Field/" rel="noopener" aria-label="Portal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 11l9-8 9 8" stroke-linecap="round" stroke-linejoin="round"/><path d="M5 10v10h14V10" stroke-linecap="round" stroke-linejoin="round"/></svg><span data-i18n="home.btn">Home</span></a>
       <div class="lang" role="group" aria-label="Language / Idioma">
         <button type="button" data-lang="en" aria-pressed="true">EN</button>
         <button type="button" data-lang="es" aria-pressed="false">ES</button>
@@ -483,7 +487,7 @@
 =================================================================== */
 const I18N = {
   en: {
-    "app.title":"Inventory Crosscheck","app.sub":"FC Inventory Reconciliation","ord.title":"Report column order","ord.hint":"— drag a chip or use ◀ ▶ · the 1st column stays frozen in Excel","ord.meta":"Meta columns:","rep.selected":"· {n} selected",
+    "app.title":"Inventory Crosscheck","app.sub":"FC Inventory Reconciliation","home.btn":"Home","ord.title":"Report column order","ord.hint":"— drag a chip or use ◀ ▶ · the 1st column stays frozen in Excel","ord.meta":"Meta columns:","rep.selected":"· {n} selected",
     "help.btn":"? Help","help.title":"How to use Crosscheck","help.sub":"Practical guide · 100% offline","help.foot":"Inventory Crosscheck · single file · offline",
     "hero.eyebrow":"Field tool · Offline","hero.h1a":"Cross-check two","hero.h1b":"spreadsheets",
     "hero.sub":"Reconcile any two files (CSV or XLSX) — match, ambiguous, no-match and only-in-anchor — with configurable status rules and a formatted Excel export. Nothing leaves your device.",
@@ -521,7 +525,7 @@ const I18N = {
     "fll.all":"All","fll.client":"Client (match + ambiguous + no match)","fll.matched":"Match","fll.ambiguous":"Ambiguous","fll.unmatched":"No match","fll.fc":"FC only"
   },
   es: {
-    "app.title":"Inventory Crosscheck","app.sub":"Reconciliación de Inventario FC","ord.title":"Orden de columnas del reporte","ord.hint":"— arrastra un chip o usa ◀ ▶ · la 1ª columna queda congelada en Excel","ord.meta":"Meta columnas:","rep.selected":"· {n} seleccionadas",
+    "app.title":"Inventory Crosscheck","app.sub":"Reconciliación de Inventario FC","home.btn":"Inicio","ord.title":"Orden de columnas del reporte","ord.hint":"— arrastra un chip o usa ◀ ▶ · la 1ª columna queda congelada en Excel","ord.meta":"Meta columnas:","rep.selected":"· {n} seleccionadas",
     "help.btn":"? Ayuda","help.title":"Cómo usar Crosscheck","help.sub":"Guía práctica · 100% offline","help.foot":"Inventory Crosscheck · un solo archivo · offline",
     "hero.eyebrow":"Herramienta de campo · Offline","hero.h1a":"Coteja dos","hero.h1b":"hojas de cálculo",
     "hero.sub":"Reconcilia cualquier par de archivos (CSV o XLSX) — match, ambiguo, sin match y solo-en-ancla — con reglas de estado configurables y export a Excel con formato. Nada sale de tu equipo.",
