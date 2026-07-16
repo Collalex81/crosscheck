@@ -1556,7 +1556,7 @@ document.getElementById('presetDeleteBtn').addEventListener('click',()=>{
 renderPresetSelect();
 (function(){ const last=getLast(); const presets=loadPresets(); if(last&&last!=='__default__'&&presets[last]){ document.getElementById('presetSelect').value=last; applyConfig(presets[last]); presetButtonsState(); } })();
 var _yr=document.getElementById('yr'); if(_yr)_yr.textContent=new Date().getFullYear();
-initLang();
+if(document.readyState==='loading'){ document.addEventListener('DOMContentLoaded', initLang); } else { initLang(); }
 
 /* ---- Ayuda (modal) ---- */
 (function(){
